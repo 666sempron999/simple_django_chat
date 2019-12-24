@@ -1,0 +1,5 @@
+1) Install postgresql driver for python - pip install psycopg2-binary
+2) Create database connection with user 'chat' and password 'chat'
+3) Install dependences from requirments.txt (pip install -r requirments.txt)
+4) Migrate django application
+
