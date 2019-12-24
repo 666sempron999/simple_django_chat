@@ -1,27 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Chat</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <ul>
-    {% for item in data %}
-    <li>
-        <h1>{{ item.text }}</h1>
-     </li>
-    {% endfor %}
+        {% for item in data %}
+        <li>
+            <h1>{{ item.text }}</h1>
+         </li>
+        {% endfor %}
 
+    <ul>
         <hr>
         <form method="post" action="">
                 {% csrf_token %}
-            <ul>
                 {{ form.as_p }}
-            </ul>
             <input type="submit" value="Отправить сообщение"/>
         </form>
-
-
-<ul>
 </body>
 </html>
